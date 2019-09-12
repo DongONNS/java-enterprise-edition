@@ -1,0 +1,27 @@
+
+//第一步，自定义类实现Cloneable接口
+class User implements Cloneable{
+    int age;
+    Address address;
+
+    public User(int age){
+        this.age = age;
+        address = new Address("湖南长沙");
+    }
+    
+//  第二步 自定义类实现自己的clone()方法
+//  实现clone（）方法时通过super.clone();调用Object实现clone方法实现的clone（）方法来得到该对象的副本
+    public User clone()throws CloneNotSupportedException{
+        return (User)super.clone();
+    }
+}
+public class CloneTest{
+    public static void main(String[] args)throws CloneNotSupportedException {
+        User u1 = new User(23);
+        User u2 = u1.clone();
+//      判断u1和u2是否相同
+        System.out.println(u1==u2);
+        System.out.println(u1.address==u2.address);
+    }
+}
+//此处的克隆只对对象里各类实例变量进行”简单复制“，如果是应用变量类型，那么就只是简答的复制这个引用变量而非是创建新的变量，
