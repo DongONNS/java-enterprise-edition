@@ -1,0 +1,29 @@
+/*
+RUNTIME代表java程序的运行时环境，可以访问JVM环境，比如处理机数量、空闲内存数量等
+ */
+
+//public class RuntimeDmeo {
+//    public static void main(String[] args){
+//        Runtime rt = Runtime.getRuntime();
+////        处理器数量、
+//        System.out.println(rt.availableProcessors());
+////        总内存、
+//        System.out.println(rt.totalMemory()/);
+////        最大可用内存、
+//        System.out.println(rt.maxMemory());
+////        空闲内存
+//        System.out.println(rt.freeMemory());
+//    }
+//}
+
+
+
+//功能一、Runtime还有个功能，可以直接单独启动一个进程来运行操作系统的命令；
+
+public class ExceTest{
+    public static void main(String[] args)throws Exception{
+        Runtime rt = Runtime.getRuntime();
+//        运行记事本程序
+        rt.exec("notepad.exe");
+    }
+}
