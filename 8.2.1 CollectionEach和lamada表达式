@@ -1,0 +1,29 @@
+import java.util.Collection;
+import java.util.HashSet;
+
+public class CollecctionEach {
+    public static void main(String[] args) {
+        Collection c = new HashSet();
+        c.add("javase");
+        c.add("javaee");
+        c.add("springmvc");
+
+//      此处使用的是匿名内部类表达式
+        c.forEach(obj -> System.out.println("迭代集合元素："+obj));
+
+    }
+}
+
+
+
+
+
+
+
+
+关于lamada表达式：Lamada表达式的主要作用是代替匿名内部类的繁琐语法，由三部分组成
+第一部分：形参列表 形参列表允许省略形参类型，如果形参列表只有一个参数，设置连形参列表的圆括号也可以省略
+第二部分：箭头 必须由英文的短横线和大于符号组成   ->
+第三部分：代码块 如果代码块只包含一条语句，Lamada代码块可以省略代码块的花括号，。Lamadad代码块只有一条return语句，甚至可以
+          省略return关键字，Lamadab表达式需要返回值，而它的代码块中仅有一条省略了return的语句，Lamada表达式会自动返回这条语
+          句的值。
